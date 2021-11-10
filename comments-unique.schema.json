@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "required": [
+        "postId",
+        "id",
+        "name",
+        "email",
+        "body"
+    ],
+    "properties": {
+        "postId": {
+            "$id": "#/properties/postId",
+            "type": "integer"
+        },
+        "id": {
+            "$id": "#/properties/id",
+            "type": "integer"
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string"
+        },
+        "email": {
+            "$id": "#/properties/email",
+            "type": "string"
+        },
+        "body": {
+            "$id": "#/properties/body",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}
