@@ -1,0 +1,125 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "additionalItems": false,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "required": [
+                    "id",
+                    "name",
+                    "username",
+                    "email",
+                    "address",
+                    "phone",
+                    "website",
+                    "company"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/items/anyOf/0/properties/id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "$id": "#/items/anyOf/0/properties/name",
+                        "type": "string"
+                    },
+                    "username": {
+                        "$id": "#/items/anyOf/0/properties/username",
+                        "type": "string"
+                    },
+                    "email": {
+                        "$id": "#/items/anyOf/0/properties/email",
+                        "type": "string"
+                    },
+                    "address": {
+                        "$id": "#/items/anyOf/0/properties/address",
+                        "type": "object",
+                        "required": [
+                            "street",
+                            "suite",
+                            "city",
+                            "zipcode",
+                            "geo"
+                        ],
+                        "properties": {
+                            "street": {
+                                "$id": "#/items/anyOf/0/properties/address/properties/street",
+                                "type": "string"
+                            },
+                            "suite": {
+                                "$id": "#/items/anyOf/0/properties/address/properties/suite",
+                                "type": "string"
+                            },
+                            "city": {
+                                "$id": "#/items/anyOf/0/properties/address/properties/city",
+                                "type": "string"
+                            },
+                            "zipcode": {
+                                "$id": "#/items/anyOf/0/properties/address/properties/zipcode",
+                                "type": "string"
+                            },
+                            "geo": {
+                                "$id": "#/items/anyOf/0/properties/address/properties/geo",
+                                "type": "object",
+                                "required": [
+                                    "lat",
+                                    "lng"
+                                ],
+                                "properties": {
+                                    "lat": {
+                                        "$id": "#/items/anyOf/0/properties/address/properties/geo/properties/lat",
+                                        "type": "string"
+                                    },
+                                    "lng": {
+                                        "$id": "#/items/anyOf/0/properties/address/properties/geo/properties/lng",
+                                        "type": "string"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "additionalProperties": false
+                    },
+                    "phone": {
+                        "$id": "#/items/anyOf/0/properties/phone",
+                        "type": "string"
+                    },
+                    "website": {
+                        "$id": "#/items/anyOf/0/properties/website",
+                        "type": "string"
+                    },
+                    "company": {
+                        "$id": "#/items/anyOf/0/properties/company",
+                        "type": "object",
+                        "required": [
+                            "name",
+                            "catchPhrase",
+                            "bs"
+                        ],
+                        "properties": {
+                            "name": {
+                                "$id": "#/items/anyOf/0/properties/company/properties/name",
+                                "type": "string"
+                            },
+                            "catchPhrase": {
+                                "$id": "#/items/anyOf/0/properties/company/properties/catchPhrase",
+                                "type": "string"
+                            },
+                            "bs": {
+                                "$id": "#/items/anyOf/0/properties/company/properties/bs",
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                },
+                "additionalProperties": false
+            }
+        ]
+    }
+}
